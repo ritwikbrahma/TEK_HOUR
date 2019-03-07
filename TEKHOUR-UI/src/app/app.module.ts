@@ -12,6 +12,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './table/table.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PresentersComponent } from './presenters/presenters.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AdalService } from 'adal-angular4';
+import { AuthGuard } from './auth.guard';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -25,7 +29,9 @@ const appRoutes: Routes = [
     NavigationComponent,
     DashboardComponent,
     TableComponent,
-    PresentersComponent
+    PresentersComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
 
   ],
-  providers: [],
+  providers: [AdalService,
+  AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
