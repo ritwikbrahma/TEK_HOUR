@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
     if (this.adalSvc.userInfo.authenticated) {
-      this.router.navigate([returnUrl]);
+      this.router.navigate(['dashboard']);
     } else {
       this.adalSvc.login();
     }

@@ -17,10 +17,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { AdalService } from 'adal-angular4';
 import { AuthGuard } from './auth.guard';
 
-const appRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'presenters', component: PresentersComponent }
-];
+
 
 
 @NgModule({
@@ -49,8 +46,6 @@ const appRoutes: Routes = [
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    RouterModule.forRoot(appRoutes)
-
   ],
   providers: [AdalService,
   AuthGuard],

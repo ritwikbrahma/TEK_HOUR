@@ -14,7 +14,8 @@ export class AuthGuard implements CanActivate, CanActivateChild {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if (this.adalSvc.userInfo.authenticated) {
+       if (this.adalSvc.userInfo.authenticated) {
+      console.log('inside auth guard')
         return true;
       }
       else {
