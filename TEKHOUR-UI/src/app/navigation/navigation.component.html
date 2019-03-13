@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>TEK-HOUR</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item [routerLink]="'/dashboard'">Dashboard</a>
       <a mat-list-item [routerLink]="'/presenters'">Presenters</a>
@@ -20,8 +20,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="item">TEKHOUR-UI</span>
-      <!-- <button class="item" mat-raised-button color="warn" (click)="logout()">Logout</button> -->
+      <!-- <span class="item">Search</span> -->
+      <button class="logout" title="Logout">
+        <i class="fa fa-sign-out" aria-hidden="true" (click)="logout()"></i>
+      </button>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

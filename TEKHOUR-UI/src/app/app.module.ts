@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AdalService } from 'adal-angular4';
 import { AuthGuard } from './auth.guard';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 
@@ -46,6 +47,7 @@ import { AuthGuard } from './auth.guard';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    AngularFontAwesomeModule
   ],
   providers: [AdalService,
   AuthGuard],
