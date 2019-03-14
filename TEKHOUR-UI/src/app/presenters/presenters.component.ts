@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentersComponent implements OnInit {
 
+  content: string = " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, quibusdam mollitia repellendus vero hic asperiores incidunt reprehenderit! Quisquam quas, ratione tempore aspernatur"
+
   constructor() { }
 
   ngOnInit() {
